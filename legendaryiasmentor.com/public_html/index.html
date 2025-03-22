@@ -36,7 +36,7 @@
       /* Poster Section Styling */
       .poster-section {
         padding: 40px 0; /* Adds padding above and below the poster */
-        background-color: #f9f9f9; /* Adds a light background color */
+        background: radial-gradient( circle, #ecead3, #f3f1c2); /* Gradient from left to right */
         text-align: center; /* Centers the image horizontally */
       }
   
@@ -72,6 +72,11 @@
     color: #2c2204; /* Text color */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow for better visibility */
     white-space: nowrap; /* Prevents text from wrapping */
+  }
+
+  .jumping-text.active {
+    left: 70%;
+    opacity: 0;
   }
 
   /* Keyframes for the jumping animation */
@@ -335,6 +340,30 @@
     </div>
   </div>
 </section>
+
+
+<script>
+  // Select the poster section and jumping text
+  const posterSection = document.querySelector('.poster-section');
+  const jumpingText = document.querySelector('.jumping-text');
+
+  // Create an Intersection Observer
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Add the 'active' class when the poster section is in view
+          jumpingText.classList.add('active');
+        }
+        // Do not remove the 'active' class when scrolling back up
+      });
+    },
+    { threshold: 0.5 } // Trigger when 50% of the poster section is visible
+  );
+
+  // Observe the poster section
+  observer.observe(posterSection);
+</script>
 
 <section class="white section">
   <div class="container">
