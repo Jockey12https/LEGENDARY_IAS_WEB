@@ -53,6 +53,43 @@
         transform: scale(1.02); /* Slightly enlarges the image on hover */
         transition: transform 0.3s ease; /* Smooth transition */
       }
+
+  /* Text Animation */
+  .jumping-text {
+    position: absolute; /* Positions the text absolutely within the poster section */
+    top: 50%; /* Starts the text in the vertical center */
+    left: 70%; /* Starts the text in the horizontal center */
+    opacity: 0;
+    transform: translate(-50%, -50%); /* Centers the text perfectly */
+    animation: jumpToSide 1.5s ease-in forwards; /* Applies the animation */
+    animation-timeline: view(); /* Triggers animation on scroll */
+    animation-range: entry; /* Starts animation when the poster enters the viewport */
+  }
+
+  .jumping-text p {
+    font-size: 40px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #2c2204; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow for better visibility */
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+
+  /* Keyframes for the jumping animation */
+  @keyframes jumpToSide {
+    0% {
+      left: 50%; /* Starts in the center horizontally */
+      opacity: 0; /* Starts invisible */
+    }
+    50% {
+      left: 60%; /* Moves slightly to the right */
+      opacity: 1; /* Becomes fully visible */
+    }
+    100% {
+      left: 80%; /* Moves further to the right */
+      opacity: 1; /* Stays visible */
+    }
+  }
+
     </style>
 
 
@@ -290,6 +327,10 @@
     <div class="row">
       <div class="col-md-12">
         <img src="upload/new-poster.jpg" alt="" class="img-responsive">
+        <div class="jumping-text">
+          <p>UPSC PCM REGULAR BATCH</p>
+          <p>ADMISSION STARTED</p>
+        </div>
       </div>
     </div>
   </div>
