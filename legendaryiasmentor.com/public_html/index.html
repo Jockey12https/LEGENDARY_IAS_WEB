@@ -319,120 +319,241 @@
     </header>
 
     <!-- Image header slider -->
-    <section class="slider-section">
-      <div class="tp-banner-container">
-        <div class="tp-banner">
-          <ul>
+<!-- HTML Slider Structure -->
+<section class="slider-section">
+  <div class="tp-banner-container">
+    <div class="tp-banner">
+      <ul>
+        <li class="active">
+          <img src="upload/air169.jpeg" alt="Slide 1">
+        </li>
+        <li>
+          <img src="upload/air922.jpeg" alt="Slide 2">
+        </li>
+        <li>
+          <img src="upload/pcm-batch-2025.jpeg" alt="Slide 3">
+        </li>
+         <li>
+                        <img src="upload/slide-9.jpeg" alt="Slide 4">
+                    </li>
+                    <li>
+                        <img src="upload/pcm.jpeg" alt="Slide 5">
+                    </li>
+                    <li>
+                        <img src="upload/slider-7.png" alt="Slide 6">
+                    </li>
+                    <li>
+                        <img src="upload/slide-6.png" alt="Slide 7">
+                    </li>
+        <!-- Add more slides as needed -->
+      </ul>
+    </div>
+    
+    <!-- Navigation Arrows -->
+    <div class="slider-nav">
+      <button class="prev-slide">❮</button>
+      <button class="next-slide">❯</button>
+    </div>
+    
+    <!-- Dots Navigation -->
+    <div class="slider-dots">
+      <!-- Dots will be added by JavaScript -->
+    </div>
+  </div>
+</section>
 
-            </li>
-            <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slide-9.jpeg"
-              data-saveperformance="off" data-title="Slide">
-              <img src="upload/air169.jpeg" alt="fullslide1" data-bgposition="center top" data-bgfit="cover"
-                data-bgrepeat="no-repeat">
+<style>
+  /* CSS for Slider */
+  .slider-section {
+    width: 100%;
+    height: 80vh; /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .tp-banner-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .tp-banner {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .tp-banner ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .tp-banner li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .tp-banner li.active {
+    opacity: 1;
+  }
+  
+  .tp-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* No cropping - shows full image */
+    object-position: center;
+  }
+  
+  /* Navigation arrows */
+  .slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  
+  .slider-nav button {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Dots navigation */
+  .slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+  }
+  
+  .slider-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .slider-dots span.active {
+    background: white;
+  }
+</style>
 
-            <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slide-9.jpeg"
-              data-saveperformance="off" data-title="Slide">
-              <img src="upload/air922.jpeg" alt="fullslide1" data-bgposition="center top" data-bgfit="cover"
-                data-bgrepeat="no-repeat">
-
-            <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slide-9.jpeg"
-              data-saveperformance="off" data-title="Slide">
-              <img src="upload/pcm-batch-2025.jpeg" alt="fullslide1" data-bgposition="center top" data-bgfit="cover"
-                data-bgrepeat="no-repeat">
-
-
-            </li>
-            <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slide-9.jpeg"
-              data-saveperformance="off" data-title="Slide">
-              <img src="upload/slide-9.jpeg" alt="fullslide1" data-bgposition="center top" data-bgfit="cover"
-                data-bgrepeat="no-repeat">
-
-            </li>
-            </li>
-            <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="upload/pcm.jpeg"
-              data-saveperformance="off" data-title="Slide">
-              <img src="upload/pcm.jpeg" alt="fullslide1" data-bgposition="center top" data-bgfit="cover"
-                data-bgrepeat="no-repeat">
-
-            </li>
-            </li>
-            <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slider-7.png"
-              data-saveperformance="off" data-title="Slide">
-              <img src="upload/slider-7.png" alt="fullslide1" data-bgposition="center top" data-bgfit="cover"
-                data-bgrepeat="no-repeat">
-
-            </li>
-            <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slide-6.png"
-              data-saveperformance="off" data-title="Slide">
-              <img src="upload/slide-6.png" alt="fullslide1" data-bgposition="center top" data-bgfit="cover"
-                data-bgrepeat="no-repeat">
-              <div class="tp-caption slider_layer_01 text-center lft tp-resizeme" data-x="center" data-y="220"
-                data-speed="1000" data-start="600" data-easing="Power3.easeInOut" data-splitin="none"
-                data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="1000"
-                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
-                Legendary<strong>IAS</strong>Mentor
-              </div>
-              <!-- <div class="tp-caption slider_layer_02 text-center lft tp-resizeme" data-x="center" data-y="320" data-speed="1000" data-start="800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="1000" style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">Great Theme For Education, University Learning Websites<br> with tons of options and custom sections!
-    </div> -->
-              <div class="tp-caption text-center lft tp-resizeme" data-x="center" data-y="390" data-speed="1000"
-                data-start="800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none"
-                data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="1000"
-                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;"><a href="#"
-                  class="btn btn-default">Hard core Mentorship Program</a> <a href="#" class="btn btn-primary">Learn
-                  More</a>
-              </div>
-            </li>
-
-            <div class="tp-caption slider_layer_01 text-center lft tp-resizeme" data-x="center" data-y="220"
-              data-speed="1000" data-start="600" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none"
-              data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="1000"
-              style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;"><i class="fa fa-html5"></i>
-              SUPPORTED <strong>HTML5 VIDEO</strong> SLIDER
-            </div>
-            <div class="tp-caption slider_layer_02 lightcolor text-center lft tp-resizeme" data-x="center" data-y="320"
-              data-speed="1000" data-start="800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none"
-              data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="1000"
-              style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">The LearnPLUS Compatible With
-              Revolution Slider<br> You Can Use Your Own Video Slider..
-            </div>
-            <div class="tp-caption text-center lft tp-resizeme" data-x="center" data-y="390" data-speed="1000"
-              data-start="800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none"
-              data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="1000"
-              style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;"><a href="#"
-                class="btn btn-default">Hard core Mentorship Program</a> <a href="#" class="btn btn-primary">Learn
-                More</a>
-            </div>
-
-            <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slider-1.jpg"
-              data-saveperformance="off" data-title="Slide">
-              <img src="upload/slider-1.jpg" alt="fullslide1" data-bgposition="center top" data-bgfit="cover"
-                data-bgrepeat="no-repeat">
-
-            </li>
-
-            <div class="tp-caption slider_layer_01 text-center lft tp-resizeme" data-x="center" data-y="220"
-              data-speed="1000" data-start="600" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none"
-              data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="1000"
-              style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;"><i class="fa fa-html5"></i>
-              SUPPORTED <strong>HTML5 VIDEO</strong> SLIDER
-            </div>
-            <div class="tp-caption slider_layer_02 lightcolor text-center lft tp-resizeme" data-x="center" data-y="320"
-              data-speed="1000" data-start="800" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none"
-              data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="1000"
-              style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">The LearnPLUS Compatible With
-              Revolution Slider<br> You Can Use Your Own Video Slider..
-            </div>
-
-            <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slide-3.png"
-              data-saveperformance="off" data-title="Slide">
-              <img src="upload/slide-3.png" alt="fullslide1" data-bgposition="center top" data-bgfit="cover"
-                data-bgrepeat="no-repeat">
-
-            </li>
-            <!--<li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-thumb="upload/slide-4.png" data-saveperformance="off" data-title="Slide">-->
-            <!--<img src="upload/slide-4.png" alt="fullslide1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">-->
-
-    </section>
+<script>
+  // JavaScript for Slider Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.slider-section');
+    const slides = document.querySelectorAll('.tp-banner li');
+    const prevBtn = document.querySelector('.prev-slide');
+    const nextBtn = document.querySelector('.next-slide');
+    const dotsContainer = document.querySelector('.slider-dots');
+    let currentSlide = 0;
+    let slideInterval;
+    
+    // Create dots navigation
+    slides.forEach((_, index) => {
+      const dot = document.createElement('span');
+      dot.addEventListener('click', () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+    
+    const dots = document.querySelectorAll('.slider-dots span');
+    
+    // Initialize first slide
+    function initSlider() {
+      slides[0].classList.add('active');
+      dots[0].classList.add('active');
+    }
+    
+    // Show specific slide
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentSlide = index;
+    }
+    
+    // Next slide
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+    
+    // Previous slide
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+    
+    // Go to specific slide
+    function goToSlide(index) {
+      showSlide(index);
+      resetInterval();
+    }
+    
+    // Auto-play functionality
+    function startInterval() {
+      slideInterval = setInterval(nextSlide, 1000);
+    }
+    
+    function resetInterval() {
+      clearInterval(slideInterval);
+      startInterval();
+    }
+    
+    // Event listeners
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetInterval();
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetInterval();
+    });
+    
+    // Pause on hover
+    slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    slider.addEventListener('mouseleave', startInterval);
+    
+    // Initialize
+    initSlider();
+    startInterval();
+    
+    // Optional: Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  });
+</script>
 
     <!-- Scrolling Text -->
     <marquee>
@@ -461,7 +582,7 @@
 
 
     <!-- Poster Section -->
-    <section class="poster-section">
+<!--    <section class="poster-section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -473,7 +594,252 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>  -->
+
+    <!-- Enhanced Infinite Loop Horizontal Slider -->
+<section class="horizontal-slider-section" style="height: 820px; background: #f5f5f5; padding: 100px 0; position: relative;">
+  <div class="slider-container" style="width: 99%; margin: 0 auto; position: relative; height: 100%;">
+    <div class="slider-track" style="display: flex; transition: transform 0.5s ease; height: 100%;">
+      <!-- Original Slides -->
+      <div class="slide" style="min-width: 33.33%; padding: 0 15px; box-sizing: border-box; position: relative;">
+        <div class="slide-content" style="height: 100%; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <img src="upload/new-poster.jpg" alt="Poster 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          <div class="slide-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 20px; transform: translateY(100%); transition: transform 0.3s ease;">
+            <h3 style="font-size: 22px; margin-bottom: 5px;color: white">UPSC PCM REGULAR BATCH</h3>
+            <p style="font-size: 18px; font-weight: bold;">ADMISSION STARTED</p>
+            <button class="enroll-btn" style="background: #290247; color: white; border: none; padding: 8px 20px; border-radius: 4px; margin-top: 10px; cursor: pointer;">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="slide" style="min-width: 33.33%; padding: 0 15px; box-sizing: border-box; position: relative;">
+        <div class="slide-content" style="height: 100%; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <img src="upload/Hero/eaglerep.jpg" alt="Poster 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          <div class="slide-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 20px; transform: translateY(100%); transition: transform 0.3s ease;">
+            <h3 style="font-size: 22px; margin-bottom: 5px;color: white">REPEATERS MENTORSHIP</h3>
+            <p style="font-size: 18px; font-weight: bold;">ENROLL NOW</p>
+            <button class="enroll-btn" style="background: #290247; color: white; border: none; padding: 8px 20px; border-radius: 4px; margin-top: 10px; cursor: pointer;">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" style="min-width: 33.33%; padding: 0 15px; box-sizing: border-box; position: relative;">
+        <div class="slide-content" style="height: 100%; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <img src="upload\Hero\regular.jpg" alt="Poster 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          <div class="slide-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 20px; transform: translateY(100%); transition: transform 0.3s ease;">
+            <h3 style="font-size: 22px; margin-bottom: 5px;color: white">REGULAR PCM BATCH</h3>
+            <p style="font-size: 18px; font-weight: bold;">LIMITED SEATS</p>
+            <button class="enroll-btn" style="background: #290247; color: white; border: none; padding: 8px 20px; border-radius: 4px; margin-top: 10px; cursor: pointer;">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" style="min-width: 38%; padding: 0 15px; box-sizing: border-box; position: relative;">
+        <div class="slide-content" style="height: 100%; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <img src="upload\Hero\hardcorepcm.jpg" alt="Poster 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          <div class="slide-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 20px; transform: translateY(100%); transition: transform 0.3s ease;">
+            <h3 style="font-size: 22px; margin-bottom: 5px;color: white">HARDCORE PCM</h3>
+            <p style="font-size: 18px; font-weight: bold;">LIMITED SEATS</p>
+            <button class="enroll-btn" style="background: #290247; color: white; border: none; padding: 8px 20px; border-radius: 4px; margin-top: 10px; cursor: pointer;">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="slide" style="min-width: 38%; padding: 0 15px; box-sizing: border-box; position: relative;">
+        <div class="slide-content" style="height: 100%; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <img src="upload\Hero\how.jpg" alt="Poster 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          <div class="slide-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 20px; transform: translateY(100%); transition: transform 0.3s ease;">
+            <h3 style="font-size: 22px; margin-bottom: 5px;color: white">MENTORSHIP FOR TOP RANKS</h3>
+            <p style="font-size: 18px; font-weight: bold;">LIMITED SEATS</p>
+            <button class="enroll-btn" style="background: #290247; color: white; border: none; padding: 8px 20px; border-radius: 4px; margin-top: 10px; cursor: pointer;">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cloned Slides for Infinite Loop -->
+      <div class="slide" style="min-width: 33.33%; padding: 0 15px; box-sizing: border-box; position: relative;">
+        <div class="slide-content" style="height: 100%; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <img src="upload/Hero/eaglerep.jpg" alt="Poster 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          <div class="slide-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 20px; transform: translateY(100%); transition: transform 0.3s ease;">
+            <h3 style="font-size: 22px; margin-bottom: 5px;color: white">REPEATERS MENTORSHIP</h3>
+            <p style="font-size: 18px; font-weight: bold;">ADMISSION STARTED</p>
+            <button class="enroll-btn" style="background: #290247; color: white; border: none; padding: 8px 20px; border-radius: 4px; margin-top: 10px; cursor: pointer;">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="slide" style="min-width: 33.33%; padding: 0 15px; box-sizing: border-box; position: relative;">
+        <div class="slide-content" style="height: 100%; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+          <img src="upload/Hero/regular.jpg" alt="Poster 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+          <div class="slide-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 20px; transform: translateY(100%); transition: transform 0.3s ease;">
+            <h3 style="font-size: 22px; margin-bottom: 5px;color: white">REGULAR PCM</h3>
+            <p style="font-size: 18px; font-weight: bold;">ENROLL NOW</p>
+            <button class="enroll-btn" style="background: #290247; color: white; border: none; padding: 8px 20px; border-radius: 4px; margin-top: 10px; cursor: pointer;">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Navigation Buttons -->
+    <button class="slider-nav prev" style="position: absolute; left: -5px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.7); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 10; transition: all 0.3s ease;">❮</button>
+    <button class="slider-nav next" style="position: absolute; right: -10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.7); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 10; transition: all 0.3s ease;">❯</button>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.slider-track');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.slider-nav.prev');
+    const nextBtn = document.querySelector('.slider-nav.next');
+    const slideContents = document.querySelectorAll('.slide-content');
+    let currentIndex = 0;
+    let slideWidth = slides[0].offsetWidth;
+    let autoSlideInterval;
+    let isTransitioning = false;
+    const visibleSlides = window.innerWidth >= 992 ? 3 : (window.innerWidth >= 576 ? 2 : 1);
+    
+    // Clone slides for infinite effect
+    function cloneSlides() {
+        const firstFewSlides = Array.from(slides).slice(0, visibleSlides);
+        firstFewSlides.forEach(slide => {
+            const clone = slide.cloneNode(true);
+            track.appendChild(clone);
+        });
+    }
+    
+    cloneSlides();
+    const allSlides = document.querySelectorAll('.slide');
+    
+    // Initialize slider position
+    track.style.transform = `translateX(0)`;
+    
+    // Hover effects
+    slideContents.forEach(content => {
+        content.addEventListener('mouseenter', function() {
+            this.querySelector('img').style.transform = 'scale(1.05)';
+            this.querySelector('.slide-overlay').style.transform = 'translateY(0)';
+        });
+        
+        content.addEventListener('mouseleave', function() {
+            this.querySelector('img').style.transform = 'scale(1)';
+            this.querySelector('.slide-overlay').style.transform = 'translateY(100%)';
+        });
+    });
+    
+    // Button hover effects
+    [prevBtn, nextBtn].forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+            this.style.background = '#ff6b6b';
+            this.style.transform = 'translateY(-50%) scale(1.1)';
+        });
+        
+        btn.addEventListener('mouseleave', function() {
+            this.style.background = 'rgba(0,0,0,0.7)';
+            this.style.transform = 'translateY(-50%) scale(1)';
+        });
+    });
+
+    document.querySelectorAll('.enroll-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default button behavior
+            window.location.href = 'course-login.html#register';
+        });
+    });
+    
+    // Next slide function
+    function goToNext() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        
+        currentIndex++;
+        track.style.transition = 'transform 0.5s ease';
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        
+        // When reaching cloned slides, reset position
+        if (currentIndex >= slides.length) {
+            setTimeout(() => {
+                track.style.transition = 'none';
+                currentIndex = 0;
+                track.style.transform = `translateX(0)`;
+                setTimeout(() => {
+                    track.style.transition = 'transform 0.5s ease';
+                    isTransitioning = false;
+                }, 50);
+            }, 500);
+        } else {
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 500);
+        }
+    }
+    
+    // Previous slide function
+    function goToPrev() {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        
+        if (currentIndex <= 0) {
+            // Jump to cloned slides at the end
+            currentIndex = slides.length;
+            track.style.transition = 'none';
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            
+            setTimeout(() => {
+                track.style.transition = 'transform 0.5s ease';
+                currentIndex--;
+                track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 500);
+            }, 50);
+        } else {
+            currentIndex--;
+            track.style.transition = 'transform 0.5s ease';
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 500);
+        }
+    }
+    
+    // Start auto-sliding
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(goToNext, 3000);
+    }
+    
+    // Event listeners
+    nextBtn.addEventListener('click', function() {
+        goToNext();
+        resetAutoSlide();
+    });
+    
+    prevBtn.addEventListener('click', function() {
+        goToPrev();
+        resetAutoSlide();
+    });
+    
+    // Reset auto-slide timer
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
+    
+    // Pause on hover
+    const slider = document.querySelector('.slider-container');
+    slider.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+    slider.addEventListener('mouseleave', startAutoSlide);
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        slideWidth = slides[0].offsetWidth;
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    });
+    
+    // Initialize
+    startAutoSlide();
+});
+</script>
 
     <!-- Animation for poster text -->
     <script>
